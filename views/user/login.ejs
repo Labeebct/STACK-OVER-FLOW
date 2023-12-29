@@ -1,40 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Black+Ops+One&family=Cabin:wght@500&family=Cormorant:wght@700&family=El+Messiri:wght@500;700&family=Fira+Sans:wght@200&family=Gruppo&family=Heebo&family=IBM+Plex+Serif:ital,wght@1,100&family=Jost:wght@200&family=Julius+Sans+One&family=Lato:wght@300&family=Marcellus&family=Maven+Pro&family=Nanum+Myeongjo:wght@800&family=Noto+Sans+Glagolitic&family=Noto+Sans+JP:wght@500&family=Noto+Sans+TC&family=PT+Serif&family=Philosopher&family=Playfair+Display:wght@400;500&family=Poppins&family=Raleway:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Rubik&family=Secular+One&family=Tangerine:wght@400;700&family=Volkhov&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/css/login.css">
-</head>
-<body>
-    <div class="wrapper">
-       <%- include('./navbar.ejs') %>
-            <div class="content">
-                <div class="frame">
-                    <img src="/assets/logos/stack-overflow.png" alt="stackoverflow-Logo" class="stack-logo">
-                    <div class="google"><img src="/assets/logos/google.png" class="sign-logos sign-google">Login in with Google</div>
-                    <div class="github"><img src="/assets/logos/github.png" class="sign-logos sign-github">Login in with GitHub</div>
-                    <div class="facebook"><img src="/assets/logos/facebook.png" class="sign-logos sign-facebook">Log in with Facebook</div>
-                    <div class="sub-frame">
-                        <form action="/login" method="post">
-                            <label for="email">Email</label>
-                            <input type="text">
-                            <br>
-                            <label for="Password">Password <span class="forget-pass"><a href="#">Forgot password ?</a></span></label>
-                            <input type="password" name="password">
-                            <br>
-                            <input type="button" value="Log in" class="login-btn">
-                        </form>
-                    </div>
-                    <p class="account-haveornot">Don't have an account?<a href="#">Sign up</a></p>
-                    <p class="employer-ornot">Are you an employer?<a href="#">Sign up on Talent</a></p>
-                </div>
-            </div>
-       </div>
+<%- include('../include/head.ejs') %>
+ <div class="wrapper login-wrapper">
+       <%- include('../include/top-nav.ejs') %>
+       <%- include('../include/login-content-page.ejs') %>
+ </div>
      
-</body>
-</html>
+<%- include('../include/end.ejs') %>

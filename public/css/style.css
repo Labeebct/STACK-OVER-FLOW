@@ -11,17 +11,23 @@
     height: 100vh;
 }
 
+body::-webkit-scrollbar {
+    width: 0.1em;
+  }
 
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
 
+.wrapper,.login-wrapper,.signup-wrapper{
 
-
-/* navitagtion */
+/*top-nav*/
 
 
 nav{
     display: flex;
     width: 100%;
-    height: 8%;
+    height: 4.5rem;
     background-color: rgba(255, 255, 255, 0.308);
     border-bottom: 1px solid rgba(121, 120, 120, 0.261);
 }
@@ -110,7 +116,7 @@ nav{
     color: rgba(27,117,208,255);
     background: none;
     border: 1px solid rgba(27,117,208,255);
-    transition: all 1s;
+    transition: transform 1s;
 }
 .nav-signup-btn{
     width: 4.4rem;
@@ -119,7 +125,7 @@ nav{
     border: none;
     color: white;
     background-color: rgba(27,117,208,255);
-    transition: all 1s;
+    transition: transform 1s;
 }
 
 .nav-login-btn:active{
@@ -228,16 +234,13 @@ nav{
 }
 
 
-
-
-
-
 /*login content */
+
 
 
 .content{
     width: 100%;
-    height: 92%;
+    height: calc(100vh - 4.5rem);
     background-color: rgba(241,242,243,255);
     display: flex;
     justify-content: center;
@@ -272,6 +275,7 @@ nav{
    width: 90%;
    border-radius: .4rem;
    margin-top: .2rem;
+   cursor: pointer;
 }
 .google{
     background-color: white;
@@ -319,6 +323,7 @@ form{
     font-family: sans-serif;
     font-size: .85rem;
     margin-right: 1.5rem;
+    font-weight: 200;
 }
 form input{
     width: 90%;
@@ -330,6 +335,8 @@ form input{
 }
 form label{
   font-size: .9rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.799);
 }
 .login-btn{
     border: none;
@@ -359,3 +366,203 @@ a{
     text-decoration: none;
     color: rgb(53, 53, 175);
 }
+}
+
+
+
+.signup-wrapper{
+    height: 100%;
+    width: auto;
+    nav{
+        height: 4.5rem;
+    }
+    .signup-tip{
+        text-align: center;
+        font-size: 1.08rem;
+        font-family: 'Poppins';
+        margin: 1.5rem;
+    }
+    .content{
+        width: 100%;
+        height: auto;
+        background-color: rgba(241,242,243,255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub-frame{
+        height: auto;
+    }
+    .password-hint{
+        font-size: .71rem;
+        font-family: sans-serif;
+        line-height: 1.1rem;
+        color: rgba(0, 0, 0, 0.795);
+    }
+    .login-btn{
+        margin: 1rem 0;
+    }
+    .terms-and-policy{
+        font-size: .71rem;
+        font-family: sans-serif;
+        line-height: 1.1rem;
+        color: rgba(0, 0, 0, 0.795);
+    }
+   
+}
+
+.user-home-wrapper{
+    .stack-logo{
+        flex: 2;
+    }
+    .product-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+    .search-div{
+        flex: 7;
+    }
+    .user-img{
+        width: 1rem;
+        height: 1rem;
+    }
+    .top-nav-right{
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-nav-right ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .top-nav-right ul li{
+        list-style: none;
+    }
+    .top-nav-right ul li a{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.733);
+        font-size: 1.1rem;
+    }
+    .inbox-li{
+        position: relative;
+    }
+    .inbox-count{
+        position: absolute;
+        top: -.4rem;
+        left: .6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        color: white;
+        background-color: red;
+        font-family: 'roboto';
+    }
+   .product-text-span{
+       padding: .5rem .7rem;
+        border-radius: 1rem;
+        color: rgba(0, 0, 0, 0.811);
+        transition: all .2s;
+        cursor: pointer;
+   }
+    .product-text-span:hover{
+    background-color: rgba(200, 200, 200, 0.406);
+   }
+    .logout-btn{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .nav-signup-btn{
+    width: 4.7rem;
+    height: 2.2rem;
+    border-radius: .3rem;
+    border: none;
+    color: white;
+    background-color: rgba(27,117,208,255);
+    transition: transform 1s;
+  }
+
+
+@media screen and (max-width:1200px){
+    .top-nav-right ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+    .top-nav-right ul li:nth-child(5){
+       display: none;
+    }
+}
+
+
+@media screen and (max-width:700px){
+    .top-nav-right ul li:nth-child(4){
+       display: none;
+    }
+}
+
+    @media screen and (max-width:650px){
+        .top-nav-right ul{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1.7rem;
+        }
+        .stack-logo{
+            flex: 0;
+            margin-left: 1rem;
+        }
+        .search-with-icon{
+            display: flex;
+            width: 90%;
+            margin-left: 2rem;
+        }
+        .search-div{
+            flex: 3;
+        }
+        .input-search{
+            padding-left: 1rem;
+        }
+        .bi-search{
+            padding-left: 1rem
+        }
+    }
+    @media screen and (max-width:900px){
+        .nav-stack-logo{
+           display: none;
+        }
+        .stack-logo{
+            flex: 0;
+            margin-left: 1rem;
+        }
+        .search-with-icon{
+            display: flex;
+            min-width: 60%;
+            margin-left: 2rem;
+        }
+        .nav-signup-btn{
+            width: 4.2rem;
+            height: 2.2rem;
+            border-radius: .3rem;
+            border: none;
+            color: white;
+            font-size: .8rem;
+            background-color: rgba(27,117,208,255);
+            transition: transform 1s;
+        }
+        
+        
+    }
+}
+
