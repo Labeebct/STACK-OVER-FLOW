@@ -5,18 +5,18 @@
         <div class="github"><img src="/assets/logos/github.png" class="sign-logos sign-github">Login in with GitHub</div>
         <div class="facebook"><img src="/assets/logos/facebook.png" class="sign-logos sign-facebook">Log in with Facebook</div>
         <div class="sub-frame">
-            <form action="/login" method="post">
+            <form action="/user/signup" method="post">
                 <label for="displayname">Display name</label>
-                <input type="text">
+                <input type="text" name="displayname" spellcheck="false">
                 <br>
                 <label for="email">Email</label>
-                <input type="text" name="email">
+                <input type="text" name="email" spellcheck="false">
                 <br>
                 <label for="Password">Password</label>
-                <input type="password" name="password">
+                <input type="password" name="password" spellcheck="false">
                 <br>
                 <p class="password-hint">Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>
-                <input type="button" value="Sign up" class="login-btn">
+                <input type="submit" value="Sign up" class="login-btn">
                 <p class="terms-and-policy">By clicking “Sign up”, you agree to our <a href="">terms of service</a>and acknowledge that you have read and understand our <a href="">privacy policy</a>and code of conduct.</p>
             </form>
         </div>

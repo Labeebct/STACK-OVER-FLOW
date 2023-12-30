@@ -1,7 +1,7 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const dotenv = require('dotenv').config()
 const nocache = require('nocache')
-const path = require('path')
 
 const port = process.env.PORT || 8082
 const app = express()
@@ -11,7 +11,7 @@ const adminRouter = require('./routes/admin')
 
 
 app.use(express.json())
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:false}))
 app.use(nocache())
 
 
@@ -24,4 +24,11 @@ app.use('/user',userRouter)
 app.use('/admin',adminRouter)
 
 
-app.listen(port,()=> console.log('App is listening at',port))
+
+
+mongoose.connect(process.env.MONGO_URL)
+.then((data)=>{
+    console.log('Database Connected SUCCESFUL');
+    app.listen(port,()=> console.log('App is listening at',port))
+})
+.catch((err)=> console.log(err))
