@@ -369,6 +369,8 @@ a{
 }
 
 
+/* signup wrapper */
+
 
 .signup-wrapper{
     height: 100%;
@@ -410,6 +412,11 @@ a{
     }
    
 }
+
+
+
+
+/* user-home-wrapper */
 
 .user-home-wrapper{
     .stack-logo{
@@ -506,11 +513,23 @@ a{
 }
 
 
-@media screen and (max-width:700px){
-    .top-nav-right ul li:nth-child(4){
-       display: none;
+    @media screen and (max-width:1000px){
+        .top-nav-right ul li:nth-child(4){
+        display: none;
+        }
+        .input-search{
+            padding-left: .5rem;
+        }
+        .bi-search{
+            padding-left: .5rem
+        }
     }
-}
+    @media screen and (max-width:700px){
+        .input-search{
+            padding-left: 1rem;
+        }
+        
+    }
 
     @media screen and (max-width:650px){
         .top-nav-right ul{
@@ -566,3 +585,83 @@ a{
     }
 }
 
+
+
+/* user-home-wrapper */
+
+
+.user-home-wrapper{
+    .user-home-content{
+        display: flex;
+        height: calc(100vh - 4.5rem);
+        width: 100%;
+    }
+    .wrapper-left {
+      display: flex;
+      justify-content: end;
+      height: 100%;
+      width: 25%;
+      border-right: 1px solid rgba(0, 0, 0, 0.409);
+    }
+    .wrapper-left-sub{
+        display: flex;
+        padding: .5rem 0;
+        height: 100%;
+        width: 20rem;
+        /* border-left: 1px solid rgba(0, 0, 0, 0.409); */
+    }
+    .wrapper-left ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper-left ul li{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 4rem;
+        padding-left: 2rem;
+        list-style: none;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.134);
+        border-left: 1px solid rgba(0, 0, 0, 0.134);
+    }
+    .left-bottom-li{
+        border-top: 1px solid rgba(0, 0, 0, 0.134);
+    }
+    .wrapper-left ul li:hover{
+       background-color: rgba(202, 202, 202, 0.321);
+    }
+
+    .wrapper-left ul li a{
+        display: flex;
+        align-items: center;
+        gap: .7rem;
+       color: rgba(0, 0, 0, 0.9);
+    }
+    .bi-plus-lg{
+        position: absolute;
+        right: 1rem;
+       
+    }
+    .bottom-li{
+        margin-top: 6rem;
+        font-size: .9rem;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.847);
+    }
+
+
+    .wrapper-center {
+        height: 100%;
+        width: 55%;
+        border-right: 1px solid black;
+    }
+    .wrapper-right {
+        height: 100%;
+        width: 20%;
+    }
+
+}
