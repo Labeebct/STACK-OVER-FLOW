@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv').config()
 const nocache = require('nocache')
+const morgan = require('morgan')
 
 const port = process.env.PORT || 8082
 const app = express()
@@ -13,7 +14,7 @@ const adminRouter = require('./routes/admin')
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(nocache())
-
+app.use(morgan('combined'))
 
 app.use(express.static('public'))
 app.set('view engine','ejs')

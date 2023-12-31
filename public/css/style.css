@@ -410,6 +410,50 @@ a{
         line-height: 1.1rem;
         color: rgba(0, 0, 0, 0.795);
     }
+    .error-message{
+        text-align: center;
+        color: red;
+        font-family: 'Poppins';
+        font-size: .85rem;
+        margin: .6rem 0;
+        margin-right: .8rem;
+        visibility: hidden;
+    }
+
+
+    .success-message{
+        color: green;
+    }
+    .redlabel{
+        color: red;
+        font-weight: 500;
+        font-size: .85rem;
+    }
+    .greenlabel{
+        display: flex;
+        align-items: center;
+        color: rgb(8, 173, 8);
+    }
+    .bi-check{
+        font-size: 1.1rem;
+        margin-top: .1rem;
+    }
+    .pass-with-icon{
+        width: 90%;
+        height: 2.3rem;
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.537);
+        padding-left: .5rem;
+        border-radius: .2rem;
+    }
+    .signup-pass-input{
+        width: 90%;
+        height: 100%;
+        border: none;
+    }
+    .bi-eye,.bi-eye-slash{
+        cursor: pointer;
+    }
    
 }
 
