@@ -13,6 +13,9 @@ const schema = {
     password:{
         type:String,
         required:true
+    },
+    createdOn:{
+        type:Date
     }
 }
 

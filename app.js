@@ -2,6 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv').config()
 const nocache = require('nocache')
+const passport = require('passport')
+const locatStrategy = require('passport-local').Strategy;
 const morgan = require('morgan')
 
 const port = process.env.PORT || 8082
@@ -14,7 +16,7 @@ const adminRouter = require('./routes/admin')
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(nocache())
-app.use(morgan('combined'))
+// app.use(morgan('combined'))
 
 app.use(express.static('public'))
 app.set('view engine','ejs')
@@ -23,6 +25,7 @@ app.set('views','views')
 
 app.use('/user',userRouter)
 app.use('/admin',adminRouter)
+
 
 
 

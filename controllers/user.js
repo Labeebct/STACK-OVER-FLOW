@@ -14,8 +14,6 @@ exports.getLogin = (req, res) => {
 
 
 
-
-
 exports.postLogin = (req, res) => {
   const { email , password } = req.body
   console.log(email);
@@ -50,7 +48,8 @@ exports.postSignup = async(req, res) => {
     const  newUserSchema = new signupModel({
       displayname:displayname,
       email:email,
-      password:hashedPass
+      password:hashedPass,
+      createdOn:Date.now()
     })
 
     if(displayname == '' || email == ''|| password == ''){

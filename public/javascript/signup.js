@@ -90,7 +90,7 @@ emailInput.onblur = () => {
 
 passwordInput.onblur=() => {
     if(passwordInput.value === ''){
-        passwordLabel.innerHTML = 'Email'
+        passwordLabel.innerHTML = 'Password'
         passwordLabel.classList.remove('redlabel')
     }
     else if(!passwordRegex.test(passwordInput.value)){
