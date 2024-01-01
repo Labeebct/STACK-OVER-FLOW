@@ -1,12 +1,12 @@
 <div class="wrapper-left">
     <div class="wrapper-left-sub">
     <ul>
-        <li><a href="#"><i class="bi bi-house-door-fill"></i>Home</a></li>
-        <li><a href="#"><i class="bi bi-patch-question-fill"></i>Questions</a></li>
-        <li><a href="#"><i class="bi bi-people-fill"></i>Users</a></li>
-        <li><a href="#"><i class="bi bi-bookmark-fill"></i>Saves</a></li>
-        <li><a href="#"><i class="bi bi-briefcase-fill"></i>Companies</a></li>
-        <li><a href="#"><i class="bi bi-person-fill"></i>Profile</a></li>
+        <li onclick="window.location.href='/user/home'" class="<%= activeDiv==='Home' ? 'active' : '' %>"><a href="#"><i class="bi bi-house-door-fill"></i>Home</a></li>
+        <li onclick="window.location.href='/user/questions'" class="<%= activeDiv==='Questions' ? 'active' : '' %>"><a href="#"><i class="bi bi-patch-question-fill"></i>Questions</a></li>
+        <li onclick="window.location.href='/user/userslist'" class="<%= activeDiv==='Users' ? 'active' : '' %>"><a href="#"><i class="bi bi-people-fill"></i>Users</a></li>
+        <li onclick="window.location.href='/user/saves'" class="<%= activeDiv==='Saves' ? 'active' : '' %>"><a href="#"><i class="bi bi-bookmark-fill"></i>Saves</a></li>
+        <li onclick="window.location.href='/user/companies'" class="<%= activeDiv==='Companies' ? 'active' : '' %>"><a href="#"><i class="bi bi-briefcase-fill"></i>Companies</a></li>
+        <li onclick="window.location.href='/user/profile'" class="<%= activeDiv==='Profile' ? 'active' : '' %>"><a href="#"><i class="bi bi-person-fill"></i>Profile</a></li>
 
         <!-- bottom li -->
     <div class="bottom-li">

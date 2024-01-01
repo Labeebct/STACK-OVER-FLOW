@@ -2,7 +2,11 @@
 
 <div class="wrapper user-home-wrapper">
    <%- include('../include/userHome/user-home-topnav.ejs') %>
-   <%- include('../include/userHome/user-home-content.ejs') %>
+   <div class="user-home-content">
+      <%- include('../include/userHome/user-home-left.ejs') %>
+      <%- include('../include/userHome/user-home-centre.ejs') %>
+      <%- include('../include/userHome/user-home-right.ejs') %>
+  </div>
 </div>
 
 <%- include('../include/end.ejs') %>

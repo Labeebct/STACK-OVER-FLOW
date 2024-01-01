@@ -462,7 +462,7 @@ a{
 
 /* user-home-wrapper */
 
-.user-home-wrapper{
+.wrapper,.user-home-wrapper{
     .stack-logo{
         flex: 2;
     }
@@ -634,7 +634,7 @@ a{
 /* user-home-wrapper */
 
 
-.user-home-wrapper{
+
     
     .user-home-content{
         display: flex;
@@ -651,7 +651,6 @@ a{
     }
     .wrapper-left-sub{
         display: flex;
-        padding: .5rem 0;
         height: 100%;
         width: 20rem;
     }
@@ -663,7 +662,9 @@ a{
     .wrapper-left .bi-person-fill{
         font-size: 1.1rem;
     }
-
+    .wrapper-left .active{
+        background-color: rgba(202, 202, 202, 0.548);
+    }
     .wrapper-left ul li{
         position: relative;
         display: flex;
@@ -679,9 +680,7 @@ a{
     .left-bottom-li{
         border-top: 1px solid rgba(0, 0, 0, 0.134);
     }
-    .wrapper-left ul li:hover{
-       background-color: rgba(202, 202, 202, 0.321);
-    }
+
 
     .wrapper-left ul li a{
         display: flex;
@@ -720,7 +719,6 @@ a{
             width: 0%;
         }
     }
-}
 
 
 .wrapper-right{
@@ -839,12 +837,13 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    overflow: scroll;
 
     .question-box{
-        height: 22rem;
+        padding: .7em 0;
         overflow-y: scroll;
         width: 90%;
+        min-height: 21rem;
         border: 1px solid rgba(0, 0, 0, 0.125);
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.078);
         background-color: white;
@@ -866,6 +865,7 @@ a{
         border-bottom: 1px solid rgba(0, 0, 0, 0.354);
     }
     .question-form-div{
+
         padding: 1.3rem;
     }
     .question-form-div form{
@@ -920,15 +920,6 @@ a{
     .submit-btn:active{
         transform: scale(.97);
     }
-    .front-quest-cont{
-        margin-top: 1.8rem;
-        width: 100%;
-        height: 30rem;
-        overflow: scroll;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .front-quest-cont::-webkit-scrollbar-thumb {
         background-color: transparent;
       }
@@ -939,7 +930,7 @@ a{
         margin-top: 1.8rem;
        display: flex;
        width: 90%;
-       height: 8rem;
+       padding: 1rem 0;
        border: 1px solid rgba(0, 0, 0, 0.217);
        background-color: white;
        border-radius: .2rem;
@@ -1052,5 +1043,111 @@ a{
             border-right: 1px solid rgba(0, 0, 0, 0.217);
         }
     
+    }
+}
+.wrapper-center::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+.wrapper-center::-webkit-scrollbar {
+    width: 0;
+  }
+
+
+.question-content{
+    display: flex;
+    
+}
+
+.users-content{
+    display: flex;
+}
+
+.save-content{
+    display: flex;
+}
+
+.profile-content{
+    display: flex;
+    height: calc(100vh - 4.5rem);
+
+    .profile-right{
+        display: flex;
+        width: 75%;
+        height: 100%;
+    }
+    .profile-top{
+      display: flex;
+      width: 100%;
+      height: 25%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.265);
+    }
+    .profile-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 2;
+        border-right: 1px solid rgba(0, 0, 0, 0.213);
+    }
+    .user-pic{
+        width: 8.5rem;
+        height: 9rem;
+        border-radius: .5rem;
+    }
+    .profile-centre {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        padding: 1rem 1.2rem;
+        flex: 5;
+        border-right: 1px solid rgba(0, 0, 0, 0.213);
+    }
+    .user-name{
+        font-size: 1.9rem;
+        font-family: 'Poppins';
+    }
+    .user-status{
+        display: flex;
+        font-family: sans-serif;
+        color: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        gap: .2rem;
+        font-size: .9rem;
+    }
+    .green-dot{
+      color: green;
+      font-size: .7rem;
+    }
+    .user-started-date{
+        display: flex;
+        gap: .3rem;
+        margin-top: 2.5rem;
+        font-size: .7rem;
+        color: rgba(0, 0, 0, 0.676);
+        font-family: sans-serif;
+    }
+    .profile-right {
+        flex: 2;
+    }
+    .edit-btn-div{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-edit-btn{
+       border: 1px solid rgba(0, 0, 0, 0.394);
+       border-radius: .1rem;
+       padding: .7rem;
+       background: none;
+       display: flex;
+       gap: .5rem;
+       font-family: 'Poppins';
+       align-items: center;
+       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.06);
+       transition: transform .3s;
+    }
+    .profile-edit-btn:active{
+        transform: scale(.98);
     }
 }

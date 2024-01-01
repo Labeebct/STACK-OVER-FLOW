@@ -80,10 +80,34 @@ exports.postSignup = async(req, res) => {
 
 
 
-
-
-
-
 exports.getHome = (req, res) => {
-  res.render("user/user-home");
+  const activeDiv = 'Home'
+  res.render("user/user-home",{activeDiv})
 };
+
+
+exports.getQuestions = (req,res) => {
+  const activeDiv = 'Questions'
+  res.render('include/userHome/home-click-comp/questions',{activeDiv})
+}
+
+exports.getUsersList = (req,res) =>{
+  const activeDiv = 'Users'
+  res.render('include/userHome/home-click-comp/users.ejs',{activeDiv})
+}
+
+exports.getSaves = (req,res) =>{
+  const activeDiv = 'Saves'
+  res.render('include/userHome/home-click-comp/saves.ejs',{activeDiv})
+}
+
+
+exports.getCompanies = (req,res) =>{
+  const activeDiv = 'Companies'
+  res.render('include/userHome/home-click-comp/companies.ejs',{activeDiv})
+}
+
+exports.getProfile = (req,res) =>{
+  const activeDiv = 'Profile'
+  res.render('include/userHome/home-click-comp/profile.ejs',{activeDiv})
+}

@@ -12,6 +12,16 @@ router.post('/signup',userController.postSignup)
 
 router.get('/home',userController.getHome)
 
+router.get('/questions',userController.getQuestions)
+
+router.get('/userslist',userController.getUsersList)
+
+router.get('/saves',userController.getSaves)
+
+router.get('/companies',userController.getCompanies)
+
+router.get('/profile',userController.getProfile)
+
 
 
 module.exports = router
