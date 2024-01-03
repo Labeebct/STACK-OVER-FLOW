@@ -1251,7 +1251,52 @@ a{
 
 .save-content{
     display: flex;
+    height: calc(100vh - 4.5rem);
+    .saves-right{
+        height: 100%;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        overflow: scroll;
+    }
+    .saves-div{
+        display: flex;
+        width: 90%;
+        height: 7rem;
+        border-radius: .4rem;
+        border: 1px solid rgba(0, 0, 0, 0.304);
+    }
+    .saves-left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 10;
+        padding: 1rem;
+    }
+    .saves-right-div{
+        display: flex;
+        flex: 1;
+        font-size: 1.3rem;
+        color: rgba(87, 87, 251, 0.333);
+    }
+    .bi-trash-fill{
+        color: red;
+    }
+    .delete-btn{
+        margin-top: .5rem;
+        font-size: 1.3rem;
+        border: none;
+        transition: all .5s;
+        background:none;
+    }
+    .delete-btn:active{
+       transform: scale(.9);
+    }
+
 }
+
 .profile-content{
     display: flex;
     height: calc(100vh - 4.5rem);
@@ -1470,6 +1515,8 @@ a{
    }
 }
 
+
+
 .comapanies-content{
     display: flex;
     height: calc(100vh - 4.5rem);
@@ -1563,3 +1610,117 @@ a{
        }
    }
 }
+
+.complet-profile-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+    background-color: rgba(241,242,243,255);
+
+    .profile-frame{
+        display: flex;
+        flex-direction: column;
+        width: 43rem;
+        background-color: white;
+        height: 38rem;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.226);
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+    .frame-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        width: 100%;
+        height: 10%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.394);
+    }
+    .profile-bottoms{
+        position: relative;
+        display: flex;
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+    }
+    .image-cont{
+        position: absolute;
+        right: 5rem;
+        top: 2.4rem;
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        height: auto;
+    }
+    .user-profile-pic-div{
+        height: 8.5rem;
+        overflow: hidden;
+        width: 7.8rem;
+        border-radius: .4rem;
+        border: 1px solid rgba(0, 0, 0, 0.556);
+    }
+    .user-dp-img{
+        width: 100%;
+        height: 100%;
+    }
+    .choose-file-div{
+        position: relative;
+        height: auto;
+        width: auto;
+        padding: .4rem .5rem;
+        border-radius: .2rem;
+        font-size: .7rem;   
+        color: white;
+        font-family: 'Poppins';
+        box-shadow: 1px 1px 5px solid rgba(0, 0, 0, 0.423);    
+        background-color: rgb(17, 17, 67);
+    }
+    .forms-datas{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+    }
+    .forms-datas label{
+      color: rgba(0, 0, 0, 0.643);
+      font-size: .9rem;
+      font-family: 'Poppins';
+    }
+    input[type='file']{
+        position: absolute;
+        left: -.3rem;
+        width: 100%;
+        opacity: 0;
+        color: transparent;
+    }
+    .fullname,.email{
+        width: 65%;
+    }
+    input[type='text']{
+        border-radius: 0;
+        height: 2.5rem;
+        padding-left: 1rem;
+    }
+    .setup-btn{
+        margin-top: 1rem;
+        border: none;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.274);
+        color: white;
+        transition: all .4s;
+        font-family: 'Poppins';
+        border-radius: .3rem;
+        background-color: rgb(10, 10, 71);
+    }
+    .setup-btn:active{
+        transform: scale(.99);
+    }
+
+}
+

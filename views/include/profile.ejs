@@ -1,0 +1,33 @@
+<%- include('../include/head.ejs') %>
+ <div class="wrapper profile-wrapper">
+    <%- include('../include/userHome/user-home-topnav.ejs') %>
+    <div class="complet-profile-content">
+        <div class="profile-frame">
+            <div class="frame-top">Setup your Profile</div>
+        <div class="profile-bottoms">
+           <div class="image-cont">
+             <div class="user-profile-pic-div"><img src="/assets/users-pic/labio.jpg" class="user-dp-img" alt=""></div>
+             <div class="choose-file-div">CHOOSE FILE<input type="file"></div>
+           </div>
+         <form action="" class="forms-datas">
+          <label for="" class="beg">Full Name</label>
+          <input type="text" class="fullname" name="fullname">
+          <br>
+          <label for="">Email Adress</label>
+          <input type="text" class="email" name="email">
+          <br>
+          <label for="">Mobile Number</label>
+          <input type="text" class="mobilenumber" name="mobilenumber">
+          <br>
+          <label for="">Country</label>
+          <input type="text" class="country" name="country">
+          <br>
+          <label for="">Skills</label>
+          <input type="text" class="skills" name="skills">
+          <input type="submit" class="setup-btn">
+         </form>
+       </div>
+    </div>
+    </div>
+ </div>
+<%- include('../include/end.ejs') %>

@@ -111,3 +111,7 @@ exports.getProfile = (req,res) =>{
   const activeDiv = 'Profile'
   res.render('include/userHome/home-click-comp/profile.ejs',{activeDiv})
 }
+
+exports.getCompleteProfile = (req,res) =>{
+   res.render('include/profile.ejs')
+}

@@ -22,6 +22,7 @@ router.get('/companies',userController.getCompanies)
 
 router.get('/profile',userController.getProfile)
 
+router.get('/completeyourprofile',userController.getCompleteProfile)
 
 
 module.exports = router
